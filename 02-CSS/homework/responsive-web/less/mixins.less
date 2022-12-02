@@ -1,1 +1,18 @@
 // Mixins acá
+.titulo(@fsize){
+    font-size: @fsize;
+}
+
+.flex(@direction, @justify, @align){
+    display:flex;
+    flex-direction: @direction;
+    justify-content: @justify;
+    align-items: @align;
+}
+
+.button(@weidth,@height,@bgcolor,@fcolor){
+    width:@weidth ;
+    height:@height ;
+    background-color:@bgcolor ;
+    color:@fcolor;
+}

@@ -1,1 +1,26 @@
 // Código de Nav acá
+nav{
+    .flex(column,center,center);
+    padding: 20px;
+    color:@nav-font;
+    background-color: @nav-bg;
+    border: 1px solid @nav-border;
+    row-gap: 0.8em;
+    
+    .OptionsContainer{
+        width: 40%;
+        font-size: 1.5rem;
+        display: flex;
+        .flex(row,space-between,center);
+        background-color: aqua;
+    }
+    @media screen and(max-width:500px){
+        padding: 12px;
+        ul{
+            width: 100%;
+            
+        }
+    }
+}
+
+

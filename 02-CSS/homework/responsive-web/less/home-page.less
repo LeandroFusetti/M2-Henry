@@ -1,9 +1,11 @@
 // Conteindo del Home
 
 .home {
-
+  
   .intro {
-
+    .fondo{
+      border-radius: @borde-imagen-fondo;
+    }
     h2 {
       padding: 15px;
     }
@@ -58,7 +60,15 @@
       }
 
       .btn {
+        .button(fit-content,fit-content,@ebony-clay,@sea-shell);
+        font-size: 1.5rem;
+        border-radius: 10px;
+        padding: 10px;
+       &:hover{
+        background-color: aqua;
+       }
       }
+      
     }
 
     .actual-img {
@@ -72,4 +82,45 @@
       }
     }
   }
+}
+
+
+@media screen and(max-width:500px){
+  
+  .home{
+    .intro{
+      padding: 10px;
+      padding-top: 0;
+    }
+    .header-img{
+      width: 100%;
+    }
+    .music-images{
+      .onda, .tecnologia{
+        display: none;
+
+      }
+      .auricular{
+        width: 100%;
+      }
+
+      .actual{
+        margin: 0;
+        padding: 10px;
+        flex-direction: column-reverse;
+
+        .actual-img, .actual-text{
+          width: 100%;
+          margin-bottom: 20px;
+        }
+        .actual-img{
+          .btn{
+            width: 100%;
+            height: 50px;
+          }
+        }
+      }
+    }  
+  }
+
 }
