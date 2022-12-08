@@ -1,17 +1,28 @@
 import React from 'react';
+import styled from"styled-components"
 
+const DivButtons = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+`;
 
-const DivButtons = 'DivButtons'
-const Buttons = 'Buttons'
+const Buttons = styled.button`
+border-radius: 5px;
+margin: 10px;
+padding: 5px;
+color: beige;
+`
 
 export default class Botones extends React.Component {
   render () {
     const { alerts } = this.props
     return (
-      <div>
+      <DivButtons>
         <button onClick={() => window.alert(alerts.m1)}>Módulo 1</button>
         <button onClick={() => window.alert(alerts.m2)}>Módulo 2</button>
-      </div>
+      </DivButtons>
     )
   }
 }
