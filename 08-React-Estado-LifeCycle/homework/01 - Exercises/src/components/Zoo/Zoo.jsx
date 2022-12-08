@@ -32,7 +32,7 @@ React.useEffect(()=>{
 const handleSpecies = (e)=>{
    const specie = e.target.value
    console.log(specie)
-   const filtrado = zoo.Allanimals.filter(animal=> animal.specie === specie)
+   const filtrado = zoo.allAnimals.filter(animal=> animal.specie === specie)
    console.log(filtrado);
    
    setZoo({
@@ -42,15 +42,11 @@ const handleSpecies = (e)=>{
    
 }
 
-const handleAllSpecies = (e)=>{
-   const specie = e.target.value
-   console.log(specie)
-   const filtrado = zoo.Allanimals.filter(animal=> animal.specie === specie)
-   console.log(filtrado);
+const handleAllSpecies = ()=>{
    
    setZoo({
       ...zoo,
-      animals: filtrado
+      animals:zoo.allAnimals
    })
 }
 const handleInputChange = (e)=>{
